@@ -3,6 +3,6 @@ import './app.css';
 import Habit from './components/habit';
 
 function App() {
-  return <Habit />;
+  return <Habit name={'hey'} />;
 }
 export default App;

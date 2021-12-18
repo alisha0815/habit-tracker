@@ -15,7 +15,7 @@ class Habit extends Component {
   render() {
     return (
       <li className="habit">
-        <span className="habitName">Reading</span>
+        <span className="habitName">Reading, {this.props.name}</span>
         <span className="habit-count">{this.state.count}</span>
         <button
           className="habit-btn habit-increase"
