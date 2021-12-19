@@ -19,18 +19,20 @@ export default class Habits extends Component {
 
   handleDecrement = (habit) => {
     const habits = [...this.state.habits];
-    console.log(habits);
     const index = habits.indexOf(habit);
-    if (habits[index].count > 0) {
-      habits[index].count--;
-    }
+    const count = habits[index].count - 1;
+    habits[index].count = count > 0 ? count : 0;
+    // if (habits[index].count > 0) {
+    //   habits[index].count--;
+    // }
     this.setState({ habits });
   };
 
   handleDelete = (habit) => {
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    habits.splice(index, 1);
+    const habits = this.state.habits.filter((item) => item.id !== habit.id);
+
+    // const index = habits.indexOf(habit);
+    // habits.splice(index, 1);
     this.setState({ habits });
   };
   render() {
