@@ -10,7 +10,7 @@
 * The user is able to delete habits.
 * The user is able to track the number of total habits
 
-<img src="./img/habitTracker.JPG" alt="HabitTracker" width="500">
+<img src="./img/haitTracker.JPG" alt="HabitTracker" width="500">
 
 ## Sources
 This app is inspired by Dream Coding Challenge.
