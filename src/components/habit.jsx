@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 class Habit extends PureComponent {
   handleIncrement = () => {
-    console.log('handleincrement', this.props.habit);
+    // console.log('handleincrement', this.props.habit);
     this.props.onIncrement(this.props.habit);
   };
 
