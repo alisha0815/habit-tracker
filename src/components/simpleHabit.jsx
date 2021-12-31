@@ -1,16 +1,24 @@
 // import React, { Component } from 'react';
 
 // react hook (state, lifecycle)
-import React, { useState } from 'react';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
 
 const SimpleHabit = (props) => {
   const [count, setcount] = useState(0);
-  const handleIncrement = () => {
+  const spanRef = useRef();
+  const handleIncrement = useCallback(() => {
     setcount(count + 1);
-  };
+  });
+
+  useEffect(() => {
+    console.log(`mounted & updated!: ${count}`);
+  }, []);
+
   return (
     <li className="habit">
-      <span className="habit-name">Reading</span>
+      <span ref={spanRef} className="habit-name">
+        Reading
+      </span>
       <span className="habit-count">{count}</span>
       <button className="habit-button habit-increase" onClick={handleIncrement}>
         <i className="fas fa-plus-square"></i>
